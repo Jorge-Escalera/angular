@@ -1,1 +1,11 @@
-<app-courses-list-item *ngFor="let course of courses" [course]="course"></app-courses-list-item>
+<div class="add-course">
+    <button class="normal" mat-button>
+        <mat-icon aria-hidden="false">add</mat-icon> Add Course
+    </button>
+</div>
+<app-courses-list-item *ngFor="let course of courses" [course]="course" (deleteCourse)="courseDeleteHandler($event)"></app-courses-list-item>
+<mat-card class="load-more">
+    <mat-card-title>
+        <a href="#">Load more</a>
+    </mat-card-title>
+</mat-card>

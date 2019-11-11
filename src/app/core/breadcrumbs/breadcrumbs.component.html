@@ -1,3 +1,3 @@
 <div class="breadcrumbs row">
-    <a href="#">Courses</a>
+    <a *ngFor="let breadcrumb of breadcrumbs; let i = index" [attr.href]="breadcrumb.href" [textContent]="breadcrumb.text"></a>
 </div>

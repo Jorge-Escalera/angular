@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./serch-section.component.sass']
 })
 export class SerchSectionComponent implements OnInit {
+  public searchInput: string;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSearchClicked() {
+    console.log(this.searchInput);
   }
 
 }

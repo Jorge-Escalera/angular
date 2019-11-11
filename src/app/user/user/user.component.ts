@@ -7,6 +7,7 @@ import { User } from '../user';
   styleUrls: ['./user.component.sass']
 })
 export class UserComponent implements OnInit {
+  // public user: IUser;
   public user: User;
 
   constructor() { }

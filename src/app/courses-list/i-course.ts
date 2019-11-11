@@ -1,7 +1,7 @@
-export interface Course {
+export interface ICourse {
     id: number;
     title: string;
-    creationDate: string;
+    date: string;
     duration: string;
     description: string;
 }

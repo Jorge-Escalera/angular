@@ -4,7 +4,6 @@ import { UserComponent } from './user/user.component';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 
 
-
 @NgModule({
   declarations: [UserComponent],
   imports: [
