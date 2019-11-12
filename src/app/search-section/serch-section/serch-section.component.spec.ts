@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SerchSectionComponent } from './serch-section.component';
+import { FormsModule } from '@angular/forms';
+import {
+  MatInputModule,
+  MatButtonModule,
+  MatIconModule,
+} from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SerchSectionComponent', () => {
   let component: SerchSectionComponent;
@@ -8,7 +15,14 @@ describe('SerchSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SerchSectionComponent ]
+      imports: [
+        FormsModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatIconModule,
+      ],
+      declarations: [ SerchSectionComponent ],
     })
     .compileComponents();
   }));

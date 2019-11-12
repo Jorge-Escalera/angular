@@ -22,4 +22,21 @@ describe('LogoComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'VIDEO COURSE'`, () => {
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('VIDEO COURSE');
+  });
+
+  it('should render title', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('a span').textContent).toContain('VIDEO COURSE');
+  });
+
+  it('should render image', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('a img').src).toContain('assets/img/courses-logo.png');
+  });
 });

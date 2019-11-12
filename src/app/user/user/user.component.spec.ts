@@ -2,13 +2,22 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserComponent } from './user.component';
 
+import {
+  MatButtonModule,
+  MatIconModule,
+} from '@angular/material';
+
 describe('UserComponent', () => {
   let component: UserComponent;
   let fixture: ComponentFixture<UserComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserComponent ]
+      declarations: [ UserComponent ],
+      imports: [
+        MatButtonModule,
+        MatIconModule,
+      ]
     })
     .compileComponents();
   }));

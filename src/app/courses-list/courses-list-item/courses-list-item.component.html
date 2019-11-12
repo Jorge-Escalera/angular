@@ -1,7 +1,7 @@
 <mat-card class="course">
     <div class="course-description">
         <mat-card-title class="course-title">
-            <span>{{ course.title }}</span>
+            <span *ngIf="course.title">{{ course.title }}</span>
             <div class="date">
                 <span class="duration">
                     <mat-icon aria-hidden="false">clock</mat-icon> {{ course.duration }}

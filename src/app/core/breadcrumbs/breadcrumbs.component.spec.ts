@@ -22,4 +22,14 @@ describe('BreadcrumbsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should start with single breadcrumb', () => {
+    expect(component.breadcrumbs).toEqual([{text: 'Courses', href: '#'}]);
+  });
+
+  it('should render breadcrumbs', () => {
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('.breadcrumbs a').textContent).toContain('Courses');
+  });
 });
