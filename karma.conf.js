@@ -33,12 +33,12 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    customLaunchers: {
-      ChromeDebugging: {
-        base: 'Chrome',
-        flags: ['--remote-debugging-port=0333']
-      }
-    },
+    // customLaunchers: {
+    //   ChromeDebugging: {
+    //     base: 'Chrome',
+    //     // flags: ['--remote-debugging-port=0333']
+    //   }
+    // },
     restartOnFileChange: true
   });
 };
