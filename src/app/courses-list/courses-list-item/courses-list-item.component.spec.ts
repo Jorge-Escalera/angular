@@ -40,16 +40,6 @@ describe('CoursesListItemComponent (isolated test)', () => {
     expect(component).toBeDefined();
   });
 
-  it('should start with an empty course', () => {
-    expect(component.course).toEqual({
-      id: 0,
-      title: '',
-      date: '',
-      duration: '',
-      description: '',
-    });
-  });
-
   it('should emit on onDeleteClicked', () => {
     // spy on event emitter
     spyOn(component.deleteCourse, 'emit');

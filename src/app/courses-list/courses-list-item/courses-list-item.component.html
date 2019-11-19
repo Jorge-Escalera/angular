@@ -1,7 +1,7 @@
 <mat-card [ngClass]="{'top-rated': course.topRated == true, 'course': true}" >
     <div class="course-description">
         <mat-card-title class="course-title">
-            <span>{{ course.title }} <mat-icon>star</mat-icon></span>
+            <span *ngIf="course.title">{{ course.title }} <mat-icon>star</mat-icon></span>
             <div class="date">
                 <span class="duration">
                     <mat-icon>clock</mat-icon> {{ course.duration }}

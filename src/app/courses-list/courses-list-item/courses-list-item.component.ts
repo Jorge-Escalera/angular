@@ -12,15 +12,7 @@ export class CoursesListItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    this.course = {
-      id: 0,
-      title: '',
-      date: '',
-      duration: '',
-      description: '',
-    };
-  }
+  ngOnInit() {}
 
   onDeleteClicked(id: number) {
     this.deleteCourse.emit(id);
