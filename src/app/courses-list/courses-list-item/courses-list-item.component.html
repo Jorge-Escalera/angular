@@ -1,13 +1,13 @@
-<mat-card class="course">
+<mat-card [ngClass]="{'top-rated': course.topRated == true, 'course': true}" >
     <div class="course-description">
         <mat-card-title class="course-title">
-            <span>{{ course.title }}</span>
+            <span>{{ course.title }} <mat-icon>star</mat-icon></span>
             <div class="date">
                 <span class="duration">
-                    <mat-icon aria-hidden="false">clock</mat-icon> {{ course.duration }}
+                    <mat-icon>clock</mat-icon> {{ course.duration }}
                 </span>
                 <span class="updated">
-                    <mat-icon aria-hidden="false">calendar_today</mat-icon> {{course.date }}
+                    <mat-icon>calendar_today</mat-icon> {{course.date }}
                 </span>
             </div>
         </mat-card-title>
@@ -17,10 +17,10 @@
     </div>
     <div class="course-actions">
         <button class="normal" mat-button>
-            <mat-icon aria-hidden="false">edit</mat-icon> Edit
+            <mat-icon>edit</mat-icon> Edit
         </button>
         <button class="normal" mat-button>
-            <mat-icon aria-hidden="false" (click)="onDeleteClicked(course.id)">delete</mat-icon> Delete
+            <mat-icon (click)="onDeleteClicked(course.id)">delete</mat-icon> Delete
         </button>
     </div>
 </mat-card>
