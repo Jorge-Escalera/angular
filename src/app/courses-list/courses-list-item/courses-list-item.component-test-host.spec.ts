@@ -23,9 +23,10 @@ class TestHostComponent {
     public course: Course = {
         id: 0,
         title: '',
-        date: '',
-        duration: '',
+        creationDate: '',
+        duration: 0,
         description: '',
+        topRated: false,
     };
     public deletedCourse: Course;
     public onDeleted(deletedCourse: Course) { this.deletedCourse = deletedCourse; }
@@ -60,7 +61,7 @@ describe('CoursesListItemComponent (isolated test)', () => {
     //     const expectedDeletedCourse = {
     //         id: 1,
     //         title: 'Vide Course 1. Name tag',
-    //         date: '9 Nov. 2018',
+    //         creationDate: '9 Nov. 2018',
     //         duration: '1h 28min',
     //         description: 'Despite the constant negative ipsum covfefe. Trump Ipsum is calling for a total and complete shutdown of Muslim text entering your website. Look at that text! Would anyone use that? Can you imagine that, the text of your next webpage?! Some people have an ability to write placeholder text... It\'s an art you\'re basically born with. You either have it or you don\'t.',
     //     };

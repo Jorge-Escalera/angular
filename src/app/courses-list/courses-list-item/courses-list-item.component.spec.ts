@@ -53,9 +53,10 @@ describe('CoursesListItemComponent (isolated test)', () => {
     component.course = {
       id: 0,
       title: '',
-      date: '',
-      duration: '',
+      creationDate: '',
+      duration: 0,
       description: '',
+      topRated: false,
     };
     component.onDeleteClicked(component.course.id);
 
@@ -69,8 +70,8 @@ describe('CoursesListItemComponent (isolated test)', () => {
   //   component.course = {
   //     id: 0,
   //     title: '',
-  //     date: '',
-  //     duration: '',
+  //     creationDate: '',
+  //     duration: 0,
   //     description: '',
   //   };
 
@@ -95,9 +96,10 @@ describe('CoursesListItemComponent (isolated test)', () => {
     component.course = {
       id: 0,
       title: '',
-      date: '',
-      duration: '',
+      creationDate: '',
+      duration: 0,
       description: '',
+      topRated: false,
     };
 
     fixture.detectChanges();
@@ -105,9 +107,10 @@ describe('CoursesListItemComponent (isolated test)', () => {
     expect(component.course).toEqual({
       id: 0,
       title: '',
-      date: '',
-      duration: '',
+      creationDate: '',
+      duration: 0,
       description: '',
+      topRated: false,
     });
   });
 

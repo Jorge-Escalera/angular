@@ -1,13 +1,13 @@
-<mat-card [ngClass]="{'top-rated': course.topRated == true, 'course': true}" >
+<mat-card [ngClass]="{'top-rated': course.topRated == true, 'course': true}" appCourseBorder creationDate="{{course.creationDate}}">
     <div class="course-description">
         <mat-card-title class="course-title">
-            <span *ngIf="course.title">{{ course.title }} <mat-icon>star</mat-icon></span>
+            <span *ngIf="course.title">{{ course.title | uppercase }} <mat-icon>star</mat-icon></span>
             <div class="date">
                 <span class="duration">
-                    <mat-icon>clock</mat-icon> {{ course.duration }}
+                    <mat-icon>clock</mat-icon> {{ course.duration | duration }}
                 </span>
                 <span class="updated">
-                    <mat-icon>calendar_today</mat-icon> {{course.date }}
+                    <mat-icon>calendar_today</mat-icon> {{course.creationDate | date }}
                 </span>
             </div>
         </mat-card-title>

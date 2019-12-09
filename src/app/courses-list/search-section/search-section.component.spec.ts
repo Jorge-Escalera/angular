@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SerchSectionComponent } from './serch-section.component';
+import { SearchSectionComponent } from './search-section.component';
 import { FormsModule } from '@angular/forms';
 import {
   MatInputModule,
@@ -9,9 +9,9 @@ import {
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('SerchSectionComponent', () => {
-  let component: SerchSectionComponent;
-  let fixture: ComponentFixture<SerchSectionComponent>;
+describe('SearchSectionComponent', () => {
+  let component: SearchSectionComponent;
+  let fixture: ComponentFixture<SearchSectionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,13 +22,13 @@ describe('SerchSectionComponent', () => {
         MatInputModule,
         MatIconModule,
       ],
-      declarations: [ SerchSectionComponent ],
+      declarations: [ SearchSectionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SerchSectionComponent);
+    fixture = TestBed.createComponent(SearchSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
